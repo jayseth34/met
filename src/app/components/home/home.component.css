@@ -1,0 +1,445 @@
+/* home.component.css */
+.home {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; /* This is crucial for vertical stacking */
+  align-items: center;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem; /* Added margin-bottom */
+  position: relative; /* Needed for absolute positioning of controls */
+  overflow: hidden; /* Prevents image overflow */
+}
+
+.carousel-inner {
+  width: 100%;
+  /* Remove height: 100% - let the image define the height */
+}
+
+.carousel-image {
+  /* Style the image directly */
+  width: 100%;
+  display: block; /* Prevents a small space below the image */
+  max-height: 500px; /* Set a maximum height if needed */
+  object-fit: contain; /* or cover, depending on desired behavior */
+}
+
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute; /* Needed for slide transition */
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  position: relative; /* Brings active item into flow */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #007bff;
+  cursor: pointer;
+  z-index: 10; /* Ensure controls are above images */
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-dots {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+/* Cards Section (No changes needed, but included for completeness) */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ... (rest of your card styles) */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin: 2rem auto; /* Added top margin for spacing */
+    width: 100%;
+    max-width: 1400px; /* Increased max width for wider cards */
+}
+
+.card {
+    width: calc(33.33% - 20px); /* Adjust for 3 cards per row and gap */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex; /* Use flexbox for card content layout */
+    flex-direction: column; /* Stack image and content vertically */
+    min-height: 300px; /* Minimum height for consistent card height */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* Reduced height of the image */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Allow content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between content and button */
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Reduced margin */
+    color: #333;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.read-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to the start of the container */
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) { /* Adjust breakpoint as needed */
+    .card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* One card per row */
+        min-height: auto;
+    }
+}
+
+/* featred cards */
+/* home.component.css */
+/* ... (Existing styles for .home, .carousel, .cards-container, .card) */
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px;
+    padding: 20px;
+    margin-top: 2rem; /* Add some space above the features */
+    background-color: #f8f9fa;
+}
+
+.feature-card {
+    display: flex; /* Use flexbox for image and content layout */
+    align-items: center; /* Vertically align image and content */
+    width: calc(33.33% - 20px); /* Adjust width for 3 cards per row with gap */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin-bottom: 20px;
+}
+
+.feature-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Ensure image stays within the circle */
+    margin-right: 20px; /* Space between image and content */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the circle while maintaining aspect ratio */
+}
+
+.feature-content {
+    text-align: left; /* Align text to the left */
+    flex-grow: 1; /* Allow content to take up available space */
+}
+
+.feature-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.feature-content p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+    .feature-card {
+        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        width: 100%; /* 1 card per row on even smaller screens */
+        flex-direction: column; /* Stack image and content vertically */
+        align-items: center;
+        text-align: center;
+    }
+    .feature-image {
+        margin: 0 0 10px 0;
+    }
+}
+
+/* whats new container */
+/* home.component.css */
+/* ... (Existing styles) */
+
+.whats-new-container {
+    padding: 40px;
+    background-color: #f8f9fa; /* Soft background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.whats-new-card {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    border: 1px solid #eee; /* Optional: Light border for definition */
+    padding: 20px; /* Add padding around the card content */
+    border-radius: 8px; /* Optional: Rounded corners for the card */
+    background-color: white; /* Optional: White background for the card */
+}
+
+.whats-new-image {
+    width: 300px;
+    margin-right: 30px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    overflow: hidden; /* Prevent image from overflowing if aspect ratio is off */
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Optional: Very subtle shadow */
+}
+
+.whats-new-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Or cover, depending on your image */
+}
+
+.whats-new-content {
+    flex-grow: 1; /* Allow text to take available space */
+    text-align: left;
+}
+
+.whats-new-content h2 {
+    margin-bottom: 10px;
+    color: #333; /* Darker heading color */
+}
+
+.whats-new-content p {
+    color: #555; /* Slightly darker text color */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .whats-new-image {
+        width: 250px; /* Slightly smaller image on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .whats-new-card {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .whats-new-image {
+        width: 100%;
+        margin: 0 0 20px 0;
+        max-height: 300px; /* Limit image height on small screens */
+    }
+    .whats-new-content{
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .whats-new-content h2 {
+        font-size: 1.3rem; /* Smaller heading on very small screens */
+    }
+    .whats-new-content p{
+        font-size: 0.9rem;
+    }
+}
+
+/* stainlesss steel section */
+/* home.component.css */
+/* ... (Existing styles) */
+
+.stainless-steel-section {
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.stainless-steel-card {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.stainless-steel-content {
+    flex-grow: 1; /* Allow text to take available space */
+    text-align: left;
+    margin-right: 30px; /* Space between text and image */
+}
+
+.stainless-steel-content h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.stainless-steel-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.stainless-steel-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Make image circular */
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stainless-steel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.view-applications-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Add some space above the button */
+}
+
+.view-applications-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .stainless-steel-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stainless-steel-card {
+        flex-direction: column-reverse; /* Stack image above text */
+        text-align: center;
+    }
+
+    .stainless-steel-content {
+        margin: 0 0 20px 0; /* Adjust margins */
+        text-align: left;
+    }
+
+    .stainless-steel-image {
+        width: 100%;
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
+    .stainless-steel-content{
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .stainless-steel-content h2 {
+        font-size: 1.3rem; /* Smaller heading on very small screens */
+    }
+    .stainless-steel-content p{
+        font-size: 0.9rem;
+    }
+}

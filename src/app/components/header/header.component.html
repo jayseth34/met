@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="toolbar-content">
+      <div fxLayout="row" fxLayoutAlign="start center" class="toolbar-left">
+        <a mat-button routerLink="/" class="brand-title">Your Brand</a>
+      </div>
+  
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <button mat-icon-button (click)="toggleMenu()" class="menu-button">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+  
+      <div fxLayout="row" fxLayoutAlign="end center" class="nav-links">
+        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/about">About Us</a>
+        <a mat-button routerLink="/products">Products</a>
+        <a mat-button routerLink="/applications">Applications</a>
+        <a mat-button routerLink="/resources">Resources</a>
+        <a mat-button routerLink="/contact">Contact Us</a>
+      </div>
+    </div>
+  
+    <div class="mobile-menu" *ngIf="isMenuOpen">
+      <div class="mobile-menu-content" fxLayout="column">
+        <a mat-button routerLink="/home" (click)="toggleMenu()">Home</a>
+        <a mat-button routerLink="/about" (click)="toggleMenu()">About Us</a>
+        <a mat-button routerLink="/products" (click)="toggleMenu()">Products</a>
+        <a mat-button routerLink="/applications" (click)="toggleMenu()">Applications</a>
+        <a mat-button routerLink="/resources" (click)="toggleMenu()">Resources</a>
+        <a mat-button routerLink="/contact" (click)="toggleMenu()">Contact</a>
+      </div>
+    </div>
+  </mat-toolbar>

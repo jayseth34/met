@@ -1,0 +1,125 @@
+<div class="home">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="currentSlide === i">
+                <img [src]="slide" alt="Slide {{ i + 1 }}" class="carousel-image">
+            </div>
+        </div>
+        <button class="carousel-control-prev" (click)="prevSlide()">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" (click)="nextSlide()">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-dots">
+            <span *ngFor="let slide of slides; let i = index" class="dot" [class.active]="currentSlide === i" (click)="goToSlide(i)"></span>
+        </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="assets/metalline1.jpg" alt="Industrial Stainless Steel" class="card-image" />
+            <div class="card-content">
+                <h3>Industrial Stainless Steel</h3>
+                <p>At Minox we provide stainless steel plates/coils/sheets/strips etc. in various grades, sizes, and finishes to cater industrial applications like breweries and distilleries, automobile, dairy and pharma, enclosures, high-end kitchen, metro coaches, electrical and electronic components etc.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/metalline1.jpg" alt="Architecture Building Construction" class="card-image" />
+            <div class="card-content">
+                <h3>Architecture Building Construction & Elevator Applications</h3>
+                <p>One stop shop for solutions in stainless steel sheets in various finishes like No.8 super mirror, bead blast, vibrations, PVD coated and customised etched designs in various colours that create innovative ideas and excellent aesthetics for architectural, signages and elevator applications.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/metalline1.jpg" alt="Pipes, Tubes, and Long Products" class="card-image" />
+            <div class="card-content">
+                <h3>Pipes, Tubes and Long Products</h3>
+                <p>Minox offers stainless steel pipes, tubes (seamless and welded), rods and suitable fittings in various grades and excellent finish which are extensively used in applications like architectural building construction, interiors, pharmaceutical, food and dairy etc.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-container">
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="assets/metalline1.jpg" alt="Quality Control">
+            </div>
+            <div class="feature-content">
+                <h3>Quality Control</h3>
+                <p>Our qualified specialists, who help us to create status of a group leader, provide us a full range of testing the quality.</p>
+            </div>
+        </div>
+    
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="assets/metalline1.jpg" alt="Your Orders">
+            </div>
+            <div class="feature-content">
+                <h3>Your Orders</h3>
+                <p>We’ll do our best to process your order as fast as possible to get the material in your hands on time.</p>
+            </div>
+        </div>
+    
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="assets/metalline1.jpg" alt="Lifetime Warranty">
+            </div>
+            <div class="feature-content">
+                <h3>Lifetime Warranty</h3>
+                <p>We stand behind the legendary quality and craftsmanship of all our products.</p>
+            </div>
+        </div>
+            <div class="feature-card">
+            <div class="feature-image">
+                <img src="assets/metalline1.jpg" alt="Delivery">
+            </div>
+            <div class="feature-content">
+                <h3>Delivery</h3>
+                <p>We have a logistics and infrastructure capability for global coverage of product delivery be it pan India or Exports</p>
+            </div>
+        </div>
+            <div class="feature-card">
+            <div class="feature-image">
+                <img src="assets/metalline1.jpg" alt="Fastest Lead Time">
+            </div>
+            <div class="feature-content">
+                <h3>Fastest Lead Time</h3>
+                <p>We offer same or next day delivery which is the fastest lead time all over the industry.</p>
+            </div>
+        </div>
+            <div class="feature-card">
+            <div class="feature-image">
+                <img src="assets/metalline1.jpg" alt="Sturdy Packaging">
+            </div>
+            <div class="feature-content">
+                <h3>Sturdy Packaging</h3>
+                <p>We use heavy-duty wooden crates to package sheets for “over the road” shipments.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="whats-new-container">
+        <div class="whats-new-card">
+            <div class="whats-new-image">
+                <img src="assets/metalline1.jpg" alt="Stainless Steel Mosaic Tiles">
+            </div>
+            <div class="whats-new-content">
+                <h2>What's New?</h2>
+                <p>Minox offers one of the most eco-friendly materials you can choose for your wall interiors and exteriors like heavy-duty stainless steel mosaic tiles which are made with stainless steel grade with a rubber peel & stick/ ceramic mesh backing for easy installation. This provides an advantage of durability, safety and hygiene. Literally anyone with proper equipment and adhesive would be able to install it easily. Light weight, flexible and bendable tile is very easy to install, save manpower and cost.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="stainless-steel-section">
+        <div class="stainless-steel-card">
+            <div class="stainless-steel-content">
+                <h2>Stainless Steel Surfaces</h2>
+                <p>Minox Metal is one of the best stainless steel finishing facilities in the industry offering the most superior quality of finishes and is the first choice addresses for the top customers in architecture, building, construction industry, decorative facades, elevator and escalator industry. Minox Metal is a worldwide leader in stainless steel surface treatments such as coloured and special finishes (No.4, No.8, H.L, Scotch Brite, Etched, Embossed, Bead Blast & Vibration finish etc.)</p>
+                <button class="view-applications-btn" routerLink="/applications">CLICK HERE</button>            </div>
+            <div class="stainless-steel-image">
+                <img src="assets/metalline1.jpg" alt="Stainless Steel Surfaces">
+            </div>
+        </div>
+    </div>
+</div>

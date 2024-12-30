@@ -1,0 +1,24 @@
+<div class="applications-grid">
+  <div
+    *ngFor="let imageUrl of imageUrls; let i = index"
+    class="grid-item"
+    (click)="openLightbox(i)"
+  >
+    <img [src]="imageUrl" alt="Application {{ i + 1 }}" />
+  </div>
+</div>
+
+<div class="lightbox" *ngIf="lightboxOpen">
+  <div class="lightbox-content">
+    <img [src]="imageUrls[currentLightboxIndex]" alt="Lightbox Image" />
+    <div class="lightbox-buttons">
+      <div>
+        <button class="close-lightbox" (click)="closeLightbox()">
+          &times;
+        </button>
+        <button class="prev-lightbox" (click)="prevImage()">&lt;</button>
+        <button class="next-lightbox" (click)="nextImage()">&gt;</button>
+      </div>
+    </div>
+  </div>
+</div>
