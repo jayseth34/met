@@ -6,26 +6,26 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './applications.component.html',
-  styleUrl: './applications.component.css'
+  styleUrl: './applications.component.css',
 })
 export class ApplicationsComponent {
   imageUrls = [
     'assets/metalline1.jpg',
     'assets/metalline2.jpg',
     'assets/metalline3.jpg',
+    'assets/metalline4.jpg',
     'assets/metalline1.jpg',
     'assets/metalline2.jpg',
     'assets/metalline3.jpg',
+    'assets/metalline4.jpg',
     'assets/metalline1.jpg',
     'assets/metalline2.jpg',
     'assets/metalline3.jpg',
+    'assets/metalline4.jpg',
     'assets/metalline1.jpg',
     'assets/metalline2.jpg',
     'assets/metalline3.jpg',
-    'assets/metalline1.jpg',
-    'assets/metalline2.jpg',
-    'assets/metalline3.jpg',
-    'assets/metalline1.jpg',
+    'assets/metalline4.jpg',
     'assets/metalline2.jpg',
     'assets/metalline3.jpg',
     // ... more image URLs
@@ -42,11 +42,14 @@ export class ApplicationsComponent {
   closeLightbox() {
     this.lightboxOpen = false;
   }
-    prevImage() {
-        this.currentLightboxIndex = (this.currentLightboxIndex - 1 + this.imageUrls.length) % this.imageUrls.length;
-    }
+  prevImage() {
+    this.currentLightboxIndex =
+      (this.currentLightboxIndex - 1 + this.imageUrls.length) %
+      this.imageUrls.length;
+  }
 
-    nextImage() {
-        this.currentLightboxIndex = (this.currentLightboxIndex + 1) % this.imageUrls.length;
-    }
+  nextImage() {
+    this.currentLightboxIndex =
+      (this.currentLightboxIndex + 1) % this.imageUrls.length;
+  }
 }
