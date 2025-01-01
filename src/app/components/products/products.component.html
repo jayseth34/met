@@ -1,0 +1,15 @@
+<div class="product-images">
+  <h2 class="heading">{{mainheading}}</h2>
+  <div class="image-grid">
+    <div class="product-card" *ngFor="let image of images">
+      <img
+        [src]="image.src"
+        [alt]="image.productName"
+        class="product-image"
+        loading="lazy"
+        (click)="onImageClick(image)"
+      />
+      <div class="product-name">{{ image.productName }}</div>
+    </div>
+  </div>
+</div>

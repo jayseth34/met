@@ -1,0 +1,96 @@
+/* product-description.component.css */
+.product-description-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-details {
+    display: flex;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+}
+
+.product-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 400px; /* Reduced image height */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-applications {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1em; /* Slightly reduced font size */
+    line-height: 1.4; /* Slightly reduced line height */
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 380px; /* Reduced max height to match image */
+}
+
+/* Target the bullet points specifically */
+.product-applications li::marker {
+    color: red;
+    font-size: 1.2em; /* Reduced bullet size */
+}
+
+/* Ensure text inside list items is black */
+.product-applications li {
+    color: black;
+    margin-bottom: 0.4em; /* Slightly reduced margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product-image-container {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .product-image {
+        height: 300px; /* Reduced image height for smaller screens */
+    }
+    .product-applications{
+        max-height: 280px; /* Reduced max height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-image {
+        height: 250px;
+    }
+    .product-applications{
+        max-height: 230px;
+    }
+}

@@ -3,6 +3,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ApplicationsComponent } from './components/applications/applications.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { ProductsComponent } from './components/products/products.component';
+import { DescriptionComponent } from './components/description/description.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect empty path to home
@@ -10,5 +12,7 @@ export const routes: Routes = [
     { path: 'applications', component: ApplicationsComponent },
     { path: 'contact', component: ContactusComponent },
     { path: 'about', component: AboutusComponent },
+    { path: 'products', component: ProductsComponent },
+    { path: 'product-description/:id', component: DescriptionComponent } // Route for product description
 
 ];

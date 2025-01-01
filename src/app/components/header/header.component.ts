@@ -4,7 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { NgIf } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { CommonService } from '../../services/common.service';
 
 @Component({
   selector: 'app-header',
@@ -21,8 +22,19 @@ import { Router, RouterModule } from '@angular/router';
 export class HeaderComponent {
   isMenuOpen = false;
   isDropdownOpen = false;
-
-  constructor(private router: Router) {}
+  subtypes = [
+    'subtype1',
+    'subtype2',
+    'subtype3',
+    'subtype4',
+    'subtype5',
+    'subtype6',
+    'subtype7',
+    'subtype8',
+    'subtype9'
+  ];
+  
+  constructor(private router: Router, public route: ActivatedRoute, public cs:CommonService) {}
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -33,14 +45,32 @@ export class HeaderComponent {
   }
 
   navigateToSubtype(subtype: string): void {
-    const flag = this.getFlagForSubtype(subtype); // Implement logic for flag
-    this.router.navigate(['/products', subtype], { queryParams: { flag } });
+    sessionStorage.setItem('subtype', subtype);
     this.isDropdownOpen = false;
     this.isMenuOpen = false;
-  }
+    this.router.navigate(['/products']).then(() => {
+      window.location.reload(); // Force page refresh
+    });  }
 
-  getFlagForSubtype(subtype: string): boolean {
-    // Replace with your logic to determine the flag value
-    return subtype === 'subtype1';
+  getFlagForSubtype(value: string): boolean {
+    // Map values to flags
+    const flagMapping: Record<string, boolean> = {
+      '2B/BAMillFinish': true,
+      '#4Brushed': true,  // Example: add more cases as needed
+      'Hairline': true,    // Example: add more cases as needed
+      '#8SuperMirror': true, // Example: add more cases as needed
+      'SSStrips': false,
+      'Pipes&Tubes': false,
+      'SSFlats': false,
+      'SSPipes': false,
+      'SSAngles': false,
+      'SSRods': false,
+      'SSHrFinishSheets': false,
+      'SSPlates': false,
+      // Add more mappings as necessary
+    };
+  
+    // Return the flag based on the selected value
+    return flagMapping[value] || false;  // Default to false if not found
   }
 }

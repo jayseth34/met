@@ -1,7 +1,7 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <div fxLayout="row" fxLayoutAlign="space-between center" class="toolbar-content">
     <div fxLayout="row" fxLayoutAlign="start center" class="toolbar-left">
-      <a mat-button routerLink="/" class="brand-title">Your Brand</a>
+      <a mat-button routerLink="/" class="brand-title">METALLINE</a>
     </div>
 
     <div fxLayout="row" fxLayoutAlign="end center">
@@ -16,9 +16,18 @@
       <div class="dropdown">
         <a mat-button (click)="toggleDropdown()">Products</a>
         <div *ngIf="isDropdownOpen" class="dropdown-content">
-          <a mat-button (click)="navigateToSubtype('subtype1')">Subtype 1</a>
-          <a mat-button (click)="navigateToSubtype('subtype2')">Subtype 2</a>
-          <a mat-button (click)="navigateToSubtype('subtype3')">Subtype 3</a>
+          <a mat-button (click)="navigateToSubtype('2B/BAMillFinish')">2B/BA Mill Finish</a>
+          <a mat-button (click)="navigateToSubtype('#4Brushed')">#4 Brushed</a>
+          <a mat-button (click)="navigateToSubtype('Hairline')">Hairline</a>
+          <a mat-button (click)="navigateToSubtype('#8SuperMirror')">#8 Super Mirror</a>
+          <a mat-button (click)="navigateToSubtype('SSStrips')">S. S. Strips</a>
+          <a mat-button (click)="navigateToSubtype('Pipes&Tubes')">Pipes & Tubes</a>
+          <a mat-button (click)="navigateToSubtype('SSFlats')">SS Flats</a>
+          <a mat-button (click)="navigateToSubtype('SSPipes')">SS Pipes</a>
+          <a mat-button (click)="navigateToSubtype('SSAngles')">SS Angles</a>
+          <a mat-button (click)="navigateToSubtype('SSRods')">SS Rods</a>
+          <a mat-button (click)="navigateToSubtype('SSHrFinishSheets')">SS HR Finish Sheets</a>
+          <a mat-button (click)="navigateToSubtype('SSPlates')">SS Plates</a>
         </div>
       </div>
       <a mat-button routerLink="/applications">Applications</a>
@@ -34,9 +43,18 @@
       <div class="dropdown">
         <a mat-button (click)="toggleDropdown()">Products</a>
         <div *ngIf="isDropdownOpen" class="dropdown-content">
-          <a mat-button (click)="navigateToSubtype('subtype1')">Subtype 1</a>
-          <a mat-button (click)="navigateToSubtype('subtype2')">Subtype 2</a>
-          <a mat-button (click)="navigateToSubtype('subtype3')">Subtype 3</a>
+          <a mat-button (click)="navigateToSubtype('2B/BAMillFinish')">2B/BA Mill Finish</a>
+          <a mat-button (click)="navigateToSubtype('#4Brushed')">#4 Brushed</a>
+          <a mat-button (click)="navigateToSubtype('Hairline')">Hairline</a>
+          <a mat-button (click)="navigateToSubtype('#8SuperMirror')">#8 Super Mirror</a>
+          <a mat-button (click)="navigateToSubtype('SSStrips')">S. S. Strips</a>
+          <a mat-button (click)="navigateToSubtype('Pipes&Tubes')">Pipes & Tubes</a>
+          <a mat-button (click)="navigateToSubtype('SSFlats')">SS Flats</a>
+          <a mat-button (click)="navigateToSubtype('SSPipes')">SS Pipes</a>
+          <a mat-button (click)="navigateToSubtype('SSAngles')">SS Angles</a>
+          <a mat-button (click)="navigateToSubtype('SSRods')">SS Rods</a>
+          <a mat-button (click)="navigateToSubtype('SSHrFinishSheets')">SS HR Finish Sheets</a>
+          <a mat-button (click)="navigateToSubtype('SSPlates')">SS Plates</a>
         </div>
       </div>
       <a mat-button routerLink="/applications" (click)="toggleMenu()">Applications</a>
