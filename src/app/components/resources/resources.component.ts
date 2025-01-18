@@ -3,11 +3,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-resources',
-  standalone: true,
-  imports: [],
-  templateUrl: './resources.component.html',
-  styleUrl: './resources.component.css'
+    selector: 'app-resources',
+    imports: [],
+    templateUrl: './resources.component.html',
+    styleUrl: './resources.component.css'
 })
 export class ResourcesComponent implements OnInit {
   videoId!: string; // Video ID from the route

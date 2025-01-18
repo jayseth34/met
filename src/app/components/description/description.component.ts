@@ -3,11 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-description',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './description.component.html',
-  styleUrl: './description.component.css'
+    selector: 'app-description',
+    imports: [CommonModule],
+    templateUrl: './description.component.html',
+    styleUrl: './description.component.css'
 })
 export class DescriptionComponent implements OnInit {
   product: any;

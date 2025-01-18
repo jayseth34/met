@@ -8,11 +8,10 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-contactus',
-  standalone: true,
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, CommonModule],
-  templateUrl: './contactus.component.html',
-  styleUrl: './contactus.component.css'
+    selector: 'app-contactus',
+    imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, CommonModule],
+    templateUrl: './contactus.component.html',
+    styleUrl: './contactus.component.css'
 })
 export class ContactusComponent {
   contactForm: FormGroup;

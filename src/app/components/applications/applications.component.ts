@@ -4,10 +4,9 @@ import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@
 
 @Component({
     selector: 'app-applications',
-    standalone: true,
     imports: [CommonModule],
     templateUrl: './applications.component.html',
-    styleUrl: './applications.component.css',
+    styleUrl: './applications.component.css'
 })
 export class ApplicationsComponent implements AfterViewInit {
     imageUrls = [

@@ -8,16 +8,15 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonService } from '../../services/common.service';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    NgIf,
-    RouterModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+    selector: 'app-header',
+    imports: [MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        NgIf,
+        RouterModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.css'
 })
 export class HeaderComponent {
   isMenuOpen = false;

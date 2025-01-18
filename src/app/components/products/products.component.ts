@@ -4,11 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CommonService } from '../../services/common.service';
 
 @Component({
-  selector: 'app-products',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './products.component.html',
-  styleUrl: './products.component.css'
+    selector: 'app-products',
+    imports: [CommonModule],
+    templateUrl: './products.component.html',
+    styleUrl: './products.component.css'
 })
 export class ProductsComponent implements OnInit {
   subtype: string = '';
