@@ -16,7 +16,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class ContactusComponent {
   contactForm: FormGroup;
-  recipientEmail: string = 'jayseth34@gmail.com';
+  recipientEmail: string = 'Metallineblr@gmail.com';
  mapUrl: string = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.93721964868675!2d77.52507091503402!3d13.035957279577968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d397b9b2c33%3A0x10b393674b0a9f86!2sMetalline!5e0!3m2!1sen!2sin!4v1737208819528!5m2!1sen!2sin";
   safeUrl: SafeResourceUrl;
 
