@@ -1,24 +1,29 @@
 <div class="applications-grid">
   <div
-    *ngFor="let imageUrl of imageUrls; let i = index"
-    class="grid-item"
-    (click)="openLightbox(i)"
+      *ngFor="let imageUrl of imageUrls; let i = index"
+      class="grid-item"
+      (click)="openLightbox(i)"
+      #gridItem
   >
-    <img [src]="imageUrl" alt="Application {{ i + 1 }}" />
+      <img [src]="imageUrl" alt="Application {{ i + 1 }}" />
   </div>
 </div>
 
 <div class="lightbox" *ngIf="lightboxOpen">
   <div class="lightbox-content">
-    <img [src]="imageUrls[currentLightboxIndex]" alt="Lightbox Image" />
-    <div class="lightbox-buttons">
-      <div>
-        <button class="close-lightbox" (click)="closeLightbox()">
-          &times;
-        </button>
-        <button class="prev-lightbox" (click)="prevImage()">&lt;</button>
-        <button class="next-lightbox" (click)="nextImage()">&gt;</button>
+      <div class="lightbox-image-container">
+          <img [src]="imageUrls[currentLightboxIndex]" alt="Lightbox Image" />
       </div>
-    </div>
+      <div class="lightbox-buttons">
+          <button class="prev-lightbox" (click)="prevImage()">
+              <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="close-lightbox" (click)="closeLightbox()">
+              <i class="fas fa-times"></i>
+          </button>
+          <button class="next-lightbox" (click)="nextImage()">
+              <i class="fas fa-chevron-right"></i>
+          </button>
+      </div>
   </div>
 </div>

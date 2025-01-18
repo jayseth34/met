@@ -1,146 +1,162 @@
-/* Main Grid Container */
 .applications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-rows: 150px;
-    grid-gap: 20px;
-    grid-auto-flow: dense; /* Ensures no empty spaces */
-    padding: 20px;
-    margin: 2rem auto;
-    max-width: 1400px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Individual Grid Items */
-  .grid-item {
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Image Styles */
-  .grid-item img {
-    width: 100%;
-    height: 100%; /* Ensures the image fills the box */
-    object-fit: cover; /* Makes sure the image covers the entire box without stretching */
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Varying Sizes for Mosaic Effect */
-  .grid-item:nth-child(2n) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
-  .grid-item:nth-child(3n) {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  
-  .grid-item:nth-child(5n) {
-    grid-column: span 3;
-    grid-row: span 2;
-  }
-  
-  /* Hover Effect for Images */
-  .grid-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  /* Lightbox Styles */
-  .lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 2rem auto;
+  max-width: 1400px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:nth-child(2n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-item:nth-child(3n) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.grid-item:nth-child(5n) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* This is the lightbox background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Add padding to the lightbox itself */
+  box-sizing: border-box; /*Include padding in width and height*/
+}
+
+.lightbox-content {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 90vh; /* Set a max height for the content */
+  overflow: auto; /* Enable scrolling if content overflows */
+}
+
+.lightbox-image-container {
+  width: 100%; /* Make container full width */
+  max-height: 50vh; /* Set a maximum height for the image */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lightbox-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.close-lightbox,
+.prev-lightbox,
+.next-lightbox {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.close-lightbox:hover,
+.prev-lightbox:hover,
+.next-lightbox:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-buttons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .applications-grid { /* ... (no changes) */ }
   .lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+      width: 95%; /* Use almost full width on smaller screens */
   }
-  
-  .lightbox-content img {
-    max-width: 100%;
-    max-height: 80%;
-    display: block;
-    margin-bottom: 20px;
+  .lightbox-image-container{
+      max-height: 40vh;
   }
-  
-  /* Lightbox Buttons */
+}
+
+@media (max-width: 480px) {
+  .applications-grid { /* ... (no changes) */ }
   .lightbox-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+      width: 100%;
   }
-  
-  .close-lightbox,
+
   .prev-lightbox,
-  .next-lightbox {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px;
-    flex: 1;
-    max-width: 150px;
-    text-align: center;
+  .next-lightbox,
+  .close-lightbox {
+      margin: 0;
+      width: auto;
+      flex: 1;
+      max-width: 80px;
+      font-size: 1rem;
   }
-  
-  .close-lightbox:hover,
-  .prev-lightbox:hover,
-  .next-lightbox:hover {
-    background-color: #0056b3;
+  .lightbox-content{
+      padding: 10px;
   }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .applications-grid {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      grid-auto-rows: 100px; /* Adjust row size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .applications-grid {
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-      grid-auto-rows: 80px;
-    }
-  
-    .lightbox-buttons {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .close-lightbox,
-    .prev-lightbox,
-    .next-lightbox {
-      margin: 5px 0;
-      max-width: 100%;
-    }
-  }
-  
+}

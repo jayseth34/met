@@ -10,12 +10,15 @@
 }
 
 .brand-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  font-family: 'Playfair Display';
 }
 
 .nav-links {
   display: flex;
+  font-size: 1.5rem;
+    gap: 10px; 
 }
 
 .nav-links a {

@@ -21,8 +21,13 @@
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
-      "dom"
-    ]
+      "dom",
+    ],
+    "typeRoots": [
+      "node_modules/@types", // Default location
+      "./src/types" // If you put youtube.d.ts in src/types
+    ],
+    "types": [] 
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
