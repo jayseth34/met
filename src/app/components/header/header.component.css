@@ -70,7 +70,7 @@
   .brand-title {
     text-align: left;
     margin-left: 16px;
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display' !important;
   }
 
   .menu-button {
