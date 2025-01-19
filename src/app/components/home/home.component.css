@@ -147,7 +147,7 @@
     font-size: 1.5rem;
     margin-bottom: 10px; /* Reduced margin */
     color: #333;
-    font-family: 'Playfair Display' !important;
+    font-family: 'Playfair Display';
 }
 
 .card-content p {
@@ -232,7 +232,7 @@
 .feature-content h3 {
     font-size: 1.2rem;
     margin-bottom: 5px;
-    font-family: 'Playfair Display' !important;
+    font-family: 'Playfair Display';
 }
 
 .feature-content p {
@@ -305,7 +305,7 @@
 .whats-new-content h2 {
     margin-bottom: 10px;
     color: #333; /* Darker heading color */
-    font-family: 'Playfair Display' !important;
+    font-family: 'Playfair Display';
 }
 
 .whats-new-content p {
@@ -340,7 +340,7 @@
 @media (max-width: 480px) {
     .whats-new-content h2 {
         font-size: 1.3rem; /* Smaller heading on very small screens */
-        font-family: 'Playfair Display' !important;
+        font-family: 'Playfair Display';
     }
     .whats-new-content p{
         font-size: 0.9rem;
@@ -378,7 +378,7 @@
 .stainless-steel-content h2 {
     margin-bottom: 10px;
     color: #333;
-    font-family: 'Playfair Display' !important;
+    font-family: 'Playfair Display';
 }
 
 .stainless-steel-content p {
@@ -448,7 +448,7 @@
 @media (max-width: 480px) {
     .stainless-steel-content h2 {
         font-size: 1.3rem; /* Smaller heading on very small screens */
-        font-family: 'Playfair Display' !important;
+        font-family: 'Playfair Display';
     }
     .stainless-steel-content p{
         font-size: 0.9rem;
