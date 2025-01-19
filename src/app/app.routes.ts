@@ -14,8 +14,7 @@ export const routes: Routes = [
     { path: 'contact', component: ContactusComponent },
     { path: 'about', component: AboutusComponent },
     { path: 'products', component: ProductsComponent },
+    { path: 'product-description/:id', component: DescriptionComponent }, // Route for product description
     { path: 'resources/:videoId', component: ResourcesComponent }, // Route with a parameter
     { path: '', redirectTo: '/resources/lNuSZiRGXco', pathMatch: 'full' }, 
-    { path: 'product-description/:id', component: DescriptionComponent } // Route for product description
-
 ];
