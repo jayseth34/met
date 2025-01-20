@@ -132,3 +132,23 @@ footer {
     margin-top: 20px; /* Reduced top margin */
   }
 }
+
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #000000;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #000000; /* Hover color for social icons */
+  transform: scale(1.1); /* Slight scale effect */
+}
+
+/* Include Font Awesome icons */

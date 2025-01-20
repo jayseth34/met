@@ -39,6 +39,11 @@ export class HeaderComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  toggle() {
+    this.isMenuOpen = false;
+    this.isDropdownOpen = false
+  }
+
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
   }

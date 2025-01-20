@@ -81,12 +81,14 @@ export class ProductsComponent implements OnInit {
         break;
       case 'Pipes&Tubes':
         this.images = [
-          { mainHeading: 'Pipes & Tubes', id: 'pipe1', productName: 'Pipes & Tubes', src: 'assets/pipesandtubes/pandt.jpg' },
+          { mainHeading: 'Pipes & Tubes', id: 'pipe1', productName: 'Rectangular Tube', src: 'assets/pipesandtubes/pandtsquarepipe.jpg' },
         ];
         break;
       case 'SSFlats':
         this.images = [
           { mainHeading: 'SS Flats', id: 'ssflat1', productName: 'SS Flats', src: 'assets/ssflats/ssflats.jpg' },
+          { mainHeading: 'SS Flats', id: 'ssflat2', productName: 'SS Flat Bar', src: 'assets/ssflats/flatbar.jpg' },
+          { mainHeading: 'SS Flats', id: 'ssflat3', productName: 'SS Flats', src: 'assets/ssflats/ssflats1.jpg' },
         ];
         break;
       case 'SSPipes':
@@ -98,11 +100,15 @@ export class ProductsComponent implements OnInit {
       case 'SSAngles':
         this.images = [
           { mainHeading: 'SS Angles', id: 'ssangles1', productName: 'SS Angles', src: 'assets/ssangles/ssangles.jpg' },
+          { mainHeading: 'SS Angles', id: 'ssangles2', productName: 'SS Angles', src: 'assets/ssangles/ssangles1.jpg' },
         ];
         break;
       case 'SSRods':
         this.images = [
-          { mainHeading: 'SS Rods', id: 'ssrods1', productName: 'SS Rods', src: 'assets/ssrods/ssrods.jpeg' },
+          { mainHeading: 'SS Rods', id: 'ssrods1', productName: 'SS 304 Round Bar', src: 'assets/ssrods/304roundbar.jpg' },
+          { mainHeading: 'SS Rods', id: 'ssrods2', productName: 'SS Square Bar', src: 'assets/ssrods/squarebar.jpg' },
+          { mainHeading: 'SS Rods', id: 'ssrods3', productName: 'SS Hex Bar', src: 'assets/ssrods/hexbar.jpg' },
+
         ];
         break;
       case 'SSHrFinishSheets':

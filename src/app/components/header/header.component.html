@@ -11,8 +11,8 @@
     </div>
 
     <div fxLayout="row" fxLayoutAlign="end center" class="nav-links">
-      <a mat-button routerLink="/home">Home</a>
-      <a mat-button routerLink="/about">About Us</a>
+      <a mat-button routerLink="/home" (click)="toggle()">Home</a>
+      <a mat-button routerLink="/about" (click)="toggle()">About Us</a>
       <div class="dropdown">
         <a mat-button (click)="toggleDropdown()">Products</a>
         <div *ngIf="isDropdownOpen" class="dropdown-content">
@@ -30,9 +30,9 @@
           <a mat-button (click)="navigateToSubtype('SSPlates')">SS Plates</a>
         </div>
       </div>
-      <a mat-button routerLink="/applications">Applications</a>
-      <a mat-button routerLink="/resources/lNuSZiRGXco">Resources</a>
-      <a mat-button routerLink="/contact">Contact Us</a>
+      <a mat-button routerLink="/applications" (click)="toggle()">Applications</a>
+      <a mat-button routerLink="/resources/lNuSZiRGXco" (click)="toggle()">Resources</a>
+      <a mat-button routerLink="/contact" (click)="toggle()">Contact Us</a>
     </div>
   </div>
 
