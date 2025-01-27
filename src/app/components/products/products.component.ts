@@ -32,7 +32,9 @@ export class ProductsComponent implements OnInit {
     switch (subtype) {
       case '2B/BAMillFinish':
         this.images = [
-          { mainHeading: '2B BA Mill Finish', id: '2bbamillfinish1', productName: '2B BA Mill Finish', src: 'assets/2bbamillfinish/2bbamillfinish.jpg' }
+          { mainHeading: '2B Finish', id: '2bbamillfinish1', productName: '2B BA Mill Finish', src: 'assets/2bbamillfinish/2bbamillfinish.jpg' },
+          { mainHeading: '2B Finish', id: '2bbamillfinish1', productName: '2B Finish', src: 'assets/2bbamillfinish/2bsheet.jpg' }
+
         ];
         break;
       case '#4Brushed':
