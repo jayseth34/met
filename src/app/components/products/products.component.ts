@@ -107,7 +107,7 @@ export class ProductsComponent implements OnInit {
         break;
       case 'SSRods':
         this.images = [
-          { mainHeading: 'SS Rods', id: 'ssrods1', productName: 'SS 304 Round Bar', src: 'assets/ssrods/304roundbar.jpg' },
+          { mainHeading: 'SS Rods', id: 'ssrods1', productName: 'SS Round Bar', src: 'assets/ssrods/304roundbar.jpg' },
           { mainHeading: 'SS Rods', id: 'ssrods2', productName: 'SS Square Bar', src: 'assets/ssrods/squarebar.jpg' },
           { mainHeading: 'SS Rods', id: 'ssrods3', productName: 'SS Hex Bar', src: 'assets/ssrods/hexbar.jpg' },
 
@@ -115,7 +115,7 @@ export class ProductsComponent implements OnInit {
         break;
       case 'SSHrFinishSheets':
         this.images = [
-          { mainHeading: 'SS Hr Finish Sheets', id: 'sshrfinish1', productName: 'SS Hr Finish Sheets 1', src: 'assets/sshrfinishsheets/sshrfinishsheet.jpg' },
+          { mainHeading: 'SS Hr Finish Sheets', id: 'sshrfinish1', productName: 'SS Hr Finish Sheets', src: 'assets/sshrfinishsheets/sshrfinishsheet.jpg' },
         ];
         break;
       case 'SSPlates':
